@@ -1,0 +1,40 @@
+{
+  "name": "react-ssr",
+  "version": "1.0.0",
+  "description": "react实现SSR",
+  "main": "index.js",
+  "scripts": {
+    "pre:file": "node ./config/scripts/pre-file.js",
+    "dev": "npm run client:dev & npm run server:dev & npm run node:dev",
+    "client:dev": "webpack --watch --config ./config/webpack.client.dev.js",
+    "server:dev": "webpack --watch --config ./config/webpack.server.dev.js",
+    "node:dev": "nodemon ./dist/server/index.js -w ./dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/webharry/react-ssr.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/webharry/react-ssr/issues"
+  },
+  "homepage": "https://github.com/webharry/react-ssr#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.13.16",
+    "@babel/core": "^7.14.0",
+    "@babel/preset-env": "^7.14.1",
+    "@babel/preset-react": "^7.13.13",
+    "babel-loader": "^8.2.2",
+    "webpack": "^5.36.2",
+    "webpack-cli": "^4.7.0",
+    "webpack-node-externals": "^3.0.0"
+  }
+}
